@@ -3,170 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PassiveBot AI Results — Backtested Crypto Bot Performance Across 5 Market Crashes</title>
-<meta name="description" content="PassiveBot AI backtested results across 5 historical crashes: 2018 bear market, COVID crash, LUNA collapse, FTX collapse. 8-10% monthly in normal markets. Full transparency.">
-<meta name="keywords" content="crypto trading bot results, backtested crypto bot performance, passive income crypto 2026, automated trading returns, Hyperliquid bot results, crypto bot win rate">
-<link rel="canonical" href="https://nemothetradinglead.github.io/passivebotai.github.io/results.html">
+<title>PassiveBot AI Results — Live Paper Trading Log | Full Transparency</title>
+<meta name="description" content="PassiveBot AI live paper trading results. Every trade logged publicly. Skipped signals, win rate, regime breakdown. Nothing hidden.">
+<link rel="canonical" href="https://passivebotai.com/results.html">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
-:root { --bg: #080c0a; --bg2: #0d1410; --bg3: #111a14; --green: #00ff87; --green-dim: #00c466; --green-dark: #003d1f; --amber: #ffb800; --red: #ff4444; --text: #e8f5e8; --text-dim: #7a9e7a; --text-dimmer: #3d5c3d; --border: #1a2e1a; --font-display: 'Syne', sans-serif; --font-mono: 'DM Mono', monospace; }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--bg); color: var(--text); font-family: var(--font-mono); overflow-x: hidden; }
-nav { position: fixed; top: 0; left: 0; right: 0; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; z-index: 100; border-bottom: 1px solid var(--border); background: rgba(8,12,10,0.9); backdrop-filter: blur(10px); }
-.nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 18px; color: var(--green); letter-spacing: -0.5px; text-decoration: none; }
-.nav-logo span { color: var(--text-dim); font-weight: 400; }
-.nav-links { display: flex; gap: 24px; align-items: center; }
-.nav-links a { color: var(--text-dim); text-decoration: none; font-size: 11px; letter-spacing: 0.5px; transition: color 0.2s; }
-.nav-links a:hover, .nav-links a.active { color: var(--green); }
-.nav-cta { background: var(--green); color: var(--bg); padding: 8px 20px; font-family: var(--font-mono); font-size: 12px; font-weight: 500; text-decoration: none; letter-spacing: 0.5px; transition: all 0.2s; }
-.nav-cta:hover { background: var(--green-dim); }
-.page-content { max-width: 800px; margin: 0 auto; padding: 140px 40px 80px; }
-.page-label { font-size: 10px; color: var(--green-dim); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
-h1 { font-family: var(--font-display); font-size: clamp(32px, 5vw, 56px); font-weight: 800; line-height: 1.1; letter-spacing: -2px; margin-bottom: 32px; }
-h1 span { color: var(--green); }
-h2 { font-family: var(--font-display); font-size: 24px; font-weight: 800; letter-spacing: -1px; margin: 48px 0 16px; }
-p { font-size: 14px; color: var(--text-dim); line-height: 1.9; margin-bottom: 16px; }
-.results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 32px 0; }
-.result-card { background: var(--bg2); padding: 28px; border: 1px solid var(--border); }
-.result-card-label { font-size: 10px; color: var(--text-dimmer); letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase; }
-.result-card-val { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin-bottom: 8px; }
-.result-card-val.green { color: var(--green); }
-.result-card-val.amber { color: var(--amber); }
-.result-card-desc { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
-.status-badge { display: inline-block; background: rgba(255,184,0,0.1); border: 1px solid var(--amber); color: var(--amber); padding: 4px 12px; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 32px; }
-.phase-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
-.phase-table th { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-dim); font-weight: 500; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
-.phase-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-dim); }
-.phase-table td:first-child { color: var(--text); }
-.phase-table td.green { color: var(--green); }
-.cta-block { background: var(--bg2); border: 1px solid var(--green-dark); padding: 40px; text-align: center; margin: 48px 0; }
-.cta-block h2 { margin: 0 0 16px; font-size: 28px; }
-.cta-block p { margin: 0 0 24px; }
-.btn-primary { background: var(--green); color: var(--bg); padding: 16px 40px; font-family: var(--font-mono); font-size: 13px; font-weight: 500; text-decoration: none; display: inline-block; letter-spacing: 0.5px; transition: all 0.2s; }
-.btn-primary:hover { background: var(--green-dim); transform: translateY(-2px); }
-.disclaimer-inline { font-size: 11px; color: var(--text-dimmer); line-height: 1.7; background: var(--bg2); border: 1px solid var(--border); padding: 20px; margin: 32px 0; }
-.footer-nav { background: var(--bg2); border-top: 1px solid var(--border); padding: 24px 40px; display: flex; justify-content: center; gap: 32px; }
-.footer-nav a { color: var(--text-dimmer); text-decoration: none; font-size: 11px; letter-spacing: 0.5px; transition: color 0.2s; }
-.footer-nav a:hover { color: var(--green); }
-@media (max-width: 768px) { nav { padding: 16px 20px; } .nav-links { display: none; } .page-content { padding: 100px 20px 60px; } .results-grid { grid-template-columns: 1fr; } }
+:root{--bg:#080c0a;--bg2:#0d1410;--bg3:#111a14;--green:#00ff87;--green-dim:#00c466;--green-dark:#003d1f;--amber:#ffb800;--blue:#4fc3f7;--red:#ff4444;--text:#e8f5e8;--text-dim:#7a9e7a;--text-dimmer:#3d5c3d;--border:#1a2e1a;--font-display:'Syne',sans-serif;--font-mono:'DM Mono',monospace;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-mono);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;z-index:100;border-bottom:1px solid var(--border);background:rgba(8,12,10,0.9);backdrop-filter:blur(10px);}
+.nav-logo{font-family:var(--font-display);font-weight:800;font-size:18px;color:var(--green);letter-spacing:-0.5px;text-decoration:none;}
+.nav-logo span{color:var(--text-dim);font-weight:400;}
+.nav-links{display:flex;gap:24px;align-items:center;}
+.nav-links a{color:var(--text-dim);text-decoration:none;font-size:11px;letter-spacing:0.5px;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--green);}
+.nav-cta{background:var(--green);color:var(--bg);padding:8px 20px;font-family:var(--font-mono);font-size:12px;font-weight:500;text-decoration:none;letter-spacing:0.5px;}
+.page-content{max-width:900px;margin:0 auto;padding:140px 40px 80px;}
+.page-label{font-size:10px;color:var(--green-dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;}
+h1{font-family:var(--font-display);font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.1;letter-spacing:-2px;margin-bottom:32px;}
+h1 span{color:var(--green);}
+h2{font-family:var(--font-display);font-size:24px;font-weight:800;letter-spacing:-1px;margin:48px 0 16px;}
+p{font-size:14px;color:var(--text-dim);line-height:1.9;margin-bottom:16px;}
+.status-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,184,0,0.1);border:1px solid var(--amber);color:var(--amber);padding:6px 16px;font-size:10px;letter-spacing:1px;text-transform:uppercase;margin-bottom:32px;}
+.status-dot-amber{width:6px;height:6px;background:var(--amber);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.5;}}
+.honest-banner{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--green);padding:24px;margin-bottom:48px;}
+.honest-banner p{margin:0;font-size:13px;color:var(--text-dim);line-height:1.8;}
+.honest-banner strong{color:var(--green);}
+.section-label{font-size:10px;color:var(--green-dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:12px;}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border);}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin:32px 0;}
+.stat-card{background:var(--bg2);padding:24px;border:1px solid var(--border);}
+.stat-label{font-size:10px;color:var(--text-dimmer);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+.stat-val{font-family:var(--font-display);font-size:36px;font-weight:800;line-height:1;margin-bottom:4px;}
+.stat-val.green{color:var(--green);}
+.stat-val.amber{color:var(--amber);}
+.stat-val.red{color:var(--red);}
+.stat-desc{font-size:11px;color:var(--text-dimmer);line-height:1.5;}
+.phase-block{background:var(--bg2);border:1px solid var(--green-dark);padding:32px;margin:32px 0;}
+.phase-title{font-family:var(--font-display);font-size:20px;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px;}
+.phase-desc{font-size:13px;color:var(--text-dim);line-height:1.7;margin-bottom:16px;}
+.phase-progress{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:8px;}
+.phase-progress-fill{height:100%;background:var(--green);border-radius:2px;}
+.phase-progress-label{font-size:11px;color:var(--text-dimmer);}
+.trade-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:12px;}
+.trade-table th{text-align:left;padding:10px 16px;border-bottom:1px solid var(--border);color:var(--text-dim);font-size:10px;letter-spacing:1px;text-transform:uppercase;}
+.trade-table td{padding:10px 16px;border-bottom:1px solid var(--border);color:var(--text-dim);}
+.trade-table td:first-child{color:var(--text);}
+.win{color:var(--green);}
+.loss{color:var(--red);}
+.open-trade{color:var(--amber);}
+.signal-std{color:var(--blue);font-size:10px;}
+.signal-weak{color:var(--amber);font-size:10px;}
+.skip-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:24px 0;}
+.skip-card{background:var(--bg2);padding:20px;border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.skip-reason{font-size:12px;color:var(--text-dim);}
+.skip-count{font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--text-dimmer);}
+.skip-count.highlight{color:var(--amber);}
+.market-context{background:var(--bg2);border:1px solid var(--border);padding:32px;margin:32px 0;}
+.context-title{font-family:var(--font-display);font-size:18px;font-weight:800;letter-spacing:-0.5px;margin-bottom:16px;}
+.context-timeline{list-style:none;}
+.context-timeline li{padding:10px 0;border-bottom:1px solid var(--border);font-size:12px;color:var(--text-dim);display:flex;gap:16px;}
+.context-timeline li:last-child{border-bottom:none;}
+.context-date{color:var(--text-dimmer);min-width:80px;}
+.bad{color:var(--red);}
+.good{color:var(--green);}
+.stocks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:24px 0;}
+.stock-card{background:var(--bg2);padding:20px;border:1px solid var(--border);}
+.stock-symbol{font-size:14px;font-weight:500;margin-bottom:4px;color:var(--blue);}
+.stock-pl{font-family:var(--font-display);font-size:24px;font-weight:800;}
+.stock-pl.pos{color:var(--green);}
+.stock-pl.neg{color:var(--red);}
+.stock-desc{font-size:11px;color:var(--text-dimmer);margin-top:4px;}
+.cta-block{background:var(--bg2);border:1px solid var(--green-dark);padding:40px;text-align:center;margin:48px 0;}
+.btn-primary{background:var(--green);color:var(--bg);padding:16px 40px;font-family:var(--font-mono);font-size:13px;font-weight:500;text-decoration:none;display:inline-block;letter-spacing:0.5px;}
+.disclaimer-inline{font-size:11px;color:var(--text-dimmer);line-height:1.7;background:var(--bg2);border:1px solid var(--border);padding:20px;margin:32px 0;}
+.footer-nav{background:var(--bg2);border-top:1px solid var(--border);padding:24px 40px;display:flex;justify-content:center;gap:32px;}
+.footer-nav a{color:var(--text-dimmer);text-decoration:none;font-size:11px;letter-spacing:0.5px;}
+.footer-nav a:hover{color:var(--green);}
+@media(max-width:768px){nav{padding:16px 20px;}.nav-links{display:none;}.page-content{padding:100px 20px 60px;}.stats-grid{grid-template-columns:1fr 1fr;}.skip-grid{grid-template-columns:1fr;}.stocks-grid{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
 <nav>
   <a href="index.html" class="nav-logo">PassiveBot<span>.AI</span></a>
   <div class="nav-links">
+    <a href="index.html">Home</a>
     <a href="how-it-works.html">How It Works</a>
     <a href="results.html" class="active">Results</a>
     <a href="faq.html">FAQ</a>
   </div>
-  <a href="https://passivebotai.gumroad.com/l/passivebot-ai" class="nav-cta">GET PASSIVEBOT → $197</a>
+  <a href="https://passivebotai.gumroad.com/l/passivebot-ai" class="nav-cta">GET PASSIVEBOT &rarr; $197</a>
 </nav>
-
 <div class="page-content">
-  <div class="page-label">// RESULTS & PERFORMANCE</div>
-  <div class="status-badge">⚠ Currently paper trading — live results coming</div>
-  <h1>PassiveBot <span>results</span></h1>
-  <p>We will never show you a cherry-picked screenshot from one good week. This page documents everything: backtested performance across five historical market crashes, current paper trading status, and the honest numbers you need to make an informed decision.</p>
-  <p>PassiveBot is currently in paper trading mode. This means the bot is running its full decision-making logic — 15 checks, triple AI consensus, regime detection — but placing no real money trades. We will only move to live trading once we have 10 or more paper trades with a 55% or higher win rate. We are not rushing this.</p>
-
-  <h2>Stress test results — 5 historical crashes</h2>
-  <p>Before PassiveBot traded a single dollar, we backtested it against the five worst periods in crypto history. Not cherry-picked good periods — the absolute worst. Here is what happened.</p>
-
-  <div class="results-grid">
-    <div class="result-card">
-      <div class="result-card-label">2018–19 Bear Market</div>
-      <div class="result-card-val amber">–2.75%/mo</div>
-      <div class="result-card-desc">18 months of sustained decline. PassiveBot survived. Capital preserved. Bot kept scanning throughout.</div>
-    </div>
-    <div class="result-card">
-      <div class="result-card-label">2020 COVID Crash</div>
-      <div class="result-card-val amber">–1.77%/mo</div>
-      <div class="result-card-desc">50% market drop in weeks. Kill switch and circuit breakers fired. Capital preserved through the worst of it.</div>
-    </div>
-    <div class="result-card">
-      <div class="result-card-label">2022 LUNA Collapse</div>
-      <div class="result-card-val amber">–1.36%/mo</div>
-      <div class="result-card-desc">$40 billion wiped in days. PassiveBot correctly sat out due to extreme Fear and Greed readings.</div>
-    </div>
-    <div class="result-card">
-      <div class="result-card-label">2022 FTX Collapse</div>
-      <div class="result-card-val amber">–1.36%/mo</div>
-      <div class="result-card-desc">Exchange counterparty risk at its highest. Native stops on Hyperliquid protected positions.</div>
-    </div>
-    <div class="result-card" style="grid-column:span 2">
-      <div class="result-card-label">Normal Market Conditions (backtested)</div>
-      <div class="result-card-val green" style="font-size:40px">8–10%/mo</div>
-      <div class="result-card-desc">This is the target. Not guaranteed. Not from a live account yet. But stress-tested, documented, and built toward with discipline.</div>
-    </div>
+  <div class="page-label">// LIVE RESULTS</div>
+  <h1>Nothing hidden.<br><span>Every trade logged.</span></h1>
+  <div class="status-badge"><div class="status-dot-amber"></div>PAPER TRADING &mdash; PHASE 1 IN PROGRESS</div>
+  <div class="honest-banner">
+    <p><strong>How this works:</strong> Every signal is logged before resolution. Every loss is published. Every skipped trade is recorded with the reason. We don't delete bad calls or cherry-pick screenshots. This page updates after every scan &mdash; 4 times daily. When we go live with real money, this page will show real P&amp;L.</p>
   </div>
-
-  <h2>Current paper trading status</h2>
-  <p>PassiveBot has been scanning live markets since April 2026. The bot runs four times daily — 6am, 12pm, 6pm and 9pm — and sends a Telegram report after every scan. Current Fear and Greed is 21 (Fear), which means the bot is correctly sitting on its hands and waiting for better conditions. This is the system working as designed.</p>
-  <p>Live results will be published here monthly once we move to Phase 2 live trading. Nothing will be hidden — including losing months.</p>
-
-  <h2>The %pm pipeline</h2>
-  <table class="phase-table" aria-label="PassiveBot monthly return pipeline by phase">
-    <thead>
-      <tr>
-        <th>Phase</th>
-        <th>Status</th>
-        <th>Target %pm</th>
-        <th>Trigger</th>
-      </tr>
-    </thead>
+  <div class="section-label">// CRYPTO BOT &mdash; LIVE STATS</div>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-label">Paper Trades</div><div class="stat-val amber">4</div><div class="stat-desc">Need 10 at 55%+ WR for Phase 2</div></div>
+    <div class="stat-card"><div class="stat-label">Win Rate</div><div class="stat-val amber">0%</div><div class="stat-desc">2 closed (0W/2L) &nbsp;|&nbsp; 2 open</div></div>
+    <div class="stat-card"><div class="stat-label">Signals Skipped</div><div class="stat-val" style="color:var(--text-dimmer)">629</div><div class="stat-desc">Logged with reason &mdash; nothing hidden</div></div>
+    <div class="stat-card"><div class="stat-label">F&amp;G Index</div><div class="stat-val amber">34</div><div class="stat-desc">Fear &mdash; gates open for longs</div></div>
+  </div>
+  <div class="phase-block">
+    <div class="phase-title">Phase 1 &rarr; Phase 2 Progress</div>
+    <div class="phase-desc">We won't risk real money until the paper trading system proves itself. Target: 10 trades at 55%+ win rate. Currently 4/10 trades logged.</div>
+    <div class="phase-progress"><div class="phase-progress-fill" style="width:40%"></div></div>
+    <div class="phase-progress-label">4 / 10 trades logged &nbsp;&middot;&nbsp; 0% win rate &nbsp;&middot;&nbsp; need 55%+ to advance</div>
+  </div>
+  <div class="section-label">// PAPER TRADE LOG</div>
+  <p>Every trade logged automatically by the bot. Entry and exit prices are real Hyperliquid market prices at time of signal.</p>
+  <table class="trade-table">
+    <thead><tr><th>#</th><th>Date</th><th>Asset</th><th>Direction</th><th>Entry</th><th>Stop</th><th>Target</th><th>Signal</th><th>F&amp;G</th><th>Result</th></tr></thead>
     <tbody>
-      <tr>
-        <td>Phase 1 — Paper trading</td>
-        <td>Active now</td>
-        <td class="green">9%pm</td>
-        <td>Running</td>
-      </tr>
-      <tr>
-        <td>Phase 2 — Live trading</td>
-        <td>Pending</td>
-        <td class="green">11–13%pm</td>
-        <td>10+ paper trades at 55%+ WR</td>
-      </tr>
-      <tr>
-        <td>Phase 2 + XGBoost active</td>
-        <td>Pending</td>
-        <td class="green">13–14%pm</td>
-        <td>30 trades of ML training data</td>
-      </tr>
-      <tr>
-        <td>Phase 3 — Grid + funding</td>
-        <td>Pending</td>
-        <td class="green">18–20%pm</td>
-        <td>$1,000+ account size</td>
-      </tr>
-      <tr>
-        <td>Bull market ceiling</td>
-        <td>Pending</td>
-        <td class="green">23%pm</td>
-        <td>Bull regime confirmed</td>
-      </tr>
+      <tr><td>1</td><td>May 1</td><td>ETH</td><td>SHORT</td><td>$2,285</td><td>$2,313</td><td>$2,203</td><td><span class="signal-std">STANDARD</span></td><td>26</td><td class="loss">LOSS -1R</td></tr>
+      <tr><td>2</td><td>May 1</td><td>SOL</td><td>SHORT</td><td>$84.13</td><td>$85.39</td><td>$80.35</td><td><span class="signal-std">STANDARD</span></td><td>26</td><td class="loss">LOSS -1R</td></tr>
+      <tr><td>3</td><td>May 15</td><td>ETH</td><td>LONG</td><td>$2,296</td><td>$2,269</td><td>$2,379</td><td><span class="signal-weak">WEAK</span></td><td>34</td><td class="open-trade">OPEN</td></tr>
+      <tr><td>4</td><td>May 15</td><td>SOL</td><td>SHORT</td><td>$92.60</td><td>$93.98</td><td>$88.43</td><td><span class="signal-weak">WEAK</span></td><td>34</td><td class="open-trade">OPEN</td></tr>
     </tbody>
   </table>
-
-  <h2>Proven strategies inside PassiveBot</h2>
-  <p>PassiveBot ships with multiple backtested strategies already built in. These are not theoretical — each one was tested across multiple market conditions before being included.</p>
-  <p>The core strategies are mean reversion on BTC (75% win rate, 0.9%pm contribution), VWAP-based trading on ETH with an ADX filter (29–38% win rate, 3.2–4.0%pm), and VWAP/ATR trading on SOL (33–49% win rate, 8–8.9%pm). The shadow bot adds three additional strategies: Range Break Failure or RBF works in all market conditions with a 56.3% win rate across 238 backtested trades; Bear Trend Shorts work in fear periods with a 45.7% win rate; and FVG Fade works in ranging fear markets with a 46.3% win rate.</p>
-
-  <div class="disclaimer-inline">
-    ⚠ All results above are from backtesting and paper trading. Backtested results are hypothetical — they represent how the system would have performed historically, not how it will perform in the future. Past performance does not guarantee future results. Crypto trading involves significant risk including the possible loss of all invested capital. PassiveBot AI is an educational product only and is not financial advice.
+  <p style="font-size:11px;color:var(--text-dimmer)">Signal tiers: STANDARD = 2/3 LLMs agree &nbsp;&middot;&nbsp; WEAK = 1 strong vote, no disagreement</p>
+  <div class="section-label">// WHY SO FEW TRADES</div>
+  <div class="market-context">
+    <div class="context-title">Market context &mdash; Liberation Day to now</div>
+    <ul class="context-timeline">
+      <li><span class="context-date">Apr 2</span><span class="bad">Liberation Day &mdash; F&amp;G crashes to 8. Worst reading since Terra-Luna 2022. Bot correctly sits out.</span></li>
+      <li><span class="context-date">Apr 2&ndash;30</span><span>6 weeks confirmed chop. BTC ADX at 11.57 (Terminal Software confirmed). No valid VWAP setups.</span></li>
+      <li><span class="context-date">May 1</span><span>F&amp;G recovers to 26. First 2 trades fire on ETH and SOL SHORT. Both stopped out as market reverses.</span></li>
+      <li><span class="context-date">May 15</span><span class="good">Weekly trend fix deployed. WEAK signal tier activated. Trades 3 and 4 fire. BTC $880 from 80H ceiling break.</span></li>
+    </ul>
   </div>
-
+  <div class="section-label">// SKIPPED SIGNALS BREAKDOWN</div>
+  <p>629 signals evaluated and skipped. Every skip logged with reason. This is how you find miscalibrated filters.</p>
+  <div class="skip-grid">
+    <div class="skip-card"><div class="skip-reason">No VWAP/ATR signal<br><span style="font-size:10px;color:var(--text-dimmer)">Price not at band extremes</span></div><div class="skip-count">211</div></div>
+    <div class="skip-card"><div class="skip-reason">LLM disagree<br><span style="font-size:10px;color:var(--text-dimmer)">No 2/3 consensus &mdash; parser bug now fixed</span></div><div class="skip-count highlight">177</div></div>
+    <div class="skip-card"><div class="skip-reason">BTC no mean reversion<br><span style="font-size:10px;color:var(--text-dimmer)">RSI and extension not at thresholds</span></div><div class="skip-count">143</div></div>
+    <div class="skip-card"><div class="skip-reason">Choppy ADX<br><span style="font-size:10px;color:var(--text-dimmer)">ADX below 15 &mdash; no trend to trade</span></div><div class="skip-count">56</div></div>
+    <div class="skip-card"><div class="skip-reason">Low liquidity hours<br><span style="font-size:10px;color:var(--text-dimmer)">Midnight&ndash;6am NZT window</span></div><div class="skip-count">27</div></div>
+    <div class="skip-card"><div class="skip-reason">Macro event<br><span style="font-size:10px;color:var(--text-dimmer)">FOMC, CPI, Fed decisions</span></div><div class="skip-count">15</div></div>
+  </div>
+  <div class="section-label">// STOCKS BOT &mdash; ALPACA PAPER</div>
+  <p>7 strategies running on Alpaca paper account. Backtested 20 years. All positions are paper trades.</p>
+  <div class="stocks-grid">
+    <div class="stock-card"><div class="stock-symbol">XLE</div><div class="stock-pl pos">+$767</div><div class="stock-desc">Sector rotation &mdash; energy long</div></div>
+    <div class="stock-card"><div class="stock-symbol">XLK</div><div class="stock-pl pos">+$311</div><div class="stock-desc">Sector rotation &mdash; tech long</div></div>
+    <div class="stock-card"><div class="stock-symbol">IWM</div><div class="stock-pl pos">+$98</div><div class="stock-desc">S1 overnight drift</div></div>
+    <div class="stock-card"><div class="stock-symbol">AAPL</div><div class="stock-pl pos">+$34</div><div class="stock-desc">S1 overnight drift</div></div>
+    <div class="stock-card"><div class="stock-symbol">GLD</div><div class="stock-pl neg">-$294</div><div class="stock-desc">Gold tactical &mdash; reviewing</div></div>
+    <div class="stock-card"><div class="stock-symbol">SPY</div><div class="stock-pl neg">-$25</div><div class="stock-desc">Short position</div></div>
+  </div>
+  <p style="font-size:12px;color:var(--text-dimmer)">Net paper P&amp;L on stocks: approximately +$483. Backtested combined return: 2.2%/month net.</p>
+  <div class="section-label">// BACKTESTED CRASH PERFORMANCE</div>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-label">2018&ndash;19 Bear Market</div><div class="stat-val amber" style="font-size:28px">&ndash;2.75%</div><div class="stat-desc">per month &middot; survived &middot; kept trading</div></div>
+    <div class="stat-card"><div class="stat-label">2020 COVID Crash</div><div class="stat-val amber" style="font-size:28px">&ndash;1.77%</div><div class="stat-desc">per month &middot; circuit breaker fired</div></div>
+    <div class="stat-card"><div class="stat-label">2022 LUNA/FTX</div><div class="stat-val amber" style="font-size:28px">&ndash;1.36%</div><div class="stat-desc">per month &middot; worst crypto had to offer</div></div>
+    <div class="stat-card"><div class="stat-label">Normal Markets</div><div class="stat-val green" style="font-size:28px">9%</div><div class="stat-desc">per month target &middot; what we're building toward</div></div>
+  </div>
+  <div class="section-label">// NEXT MILESTONES</div>
+  <table class="trade-table">
+    <thead><tr><th>Milestone</th><th>Status</th><th>What changes</th></tr></thead>
+    <tbody>
+      <tr><td>10 paper trades</td><td class="open-trade">4/10 &mdash; in progress</td><td>Forensic audit &mdash; find miscalibrated filters</td></tr>
+      <tr><td>55%+ win rate</td><td class="open-trade">0% &mdash; need more data</td><td>Phase 2 unlocked &mdash; deposit real money</td></tr>
+      <tr><td>BTC 80H ceiling break</td><td class="open-trade">$880 away at $82,087</td><td>First BTC paper trade via accumulation signal</td></tr>
+      <tr><td>Phase 2 live trading</td><td class="open-trade">Pending above</td><td>Real money &mdash; real results published here</td></tr>
+      <tr><td>30 live trades</td><td class="open-trade">Future</td><td>XGBoost ML loop activates</td></tr>
+    </tbody>
+  </table>
   <div class="cta-block">
-    <h2>Build toward these numbers yourself</h2>
-    <p>$197 one time. Full source code. Paper trade first. Go live when you're ready.</p>
-    <a href="https://passivebotai.gumroad.com/l/passivebot-ai" class="btn-primary">GET PASSIVEBOT → $197</a>
+    <h2>Want to run this yourself?</h2>
+    <p>Full source code. Both bots. $197 once. No subscription.</p>
+    <a href="https://passivebotai.gumroad.com/l/passivebot-ai" class="btn-primary">GET PASSIVEBOT &rarr; $197</a>
   </div>
+  <div class="disclaimer-inline">PassiveBot AI is an educational product only. Paper trading results are simulated and do not represent actual trading outcomes. Backtested results are hypothetical. Past performance does not guarantee future results. Crypto and stock trading involve significant risk including total loss of capital. You are solely responsible for all trading decisions.</div>
 </div>
-
-<nav class="footer-nav" aria-label="Footer navigation">
+<nav class="footer-nav">
   <a href="index.html">Home</a>
   <a href="how-it-works.html">How It Works</a>
   <a href="results.html">Results</a>
